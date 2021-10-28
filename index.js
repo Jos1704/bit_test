@@ -5,14 +5,14 @@ $('#search_date').click(function () {
     var container  = $('#container'); //donde se va a mostrar el resultado
     container.append('la edad de la luna es:' + edad + '<br>');
     container.append('la fase de la luna es: ' + fase + '<br>');
-    var dias = 8; // Número de días a agregar
+    var dias = edad; // Número de días a agregar
     var fecha_final = new Date(fecha);
     fecha_final.setDate(fecha_final.getDate() + dias);
-    container.html('la fecha Domingo de ramos es: ' + fecha + '<br>');
+    container.append('la fecha Domingo de ramos es: ' + fecha_final + '<br>');
     fecha_final.setDate(fecha_final.getDate() + dias);
-    container.html('la fecha Domingo de resureccion es: ' + fecha + '<br>');
-    fecha_final.setDate(fecha_final.getDate() + 2);
-    container.html('la fecha viernes santo es: ' + fecha + '<br>');
+    container.append('la fecha Domingo de resureccion es: ' + fecha_final + '<br>');
+    fecha_final.setDate(fecha_final.getDate() - 2);
+    container.append('la fecha viernes santo es: ' + fecha_final + '<br>');
 })
 
 
